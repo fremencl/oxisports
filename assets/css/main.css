@@ -3494,11 +3494,11 @@ input, select, textarea {
 				-moz-object-fit: cover;
 				-webkit-object-fit: cover;
 				-ms-object-fit: cover;
-				object-fit: cover;
+				object-fit: contain;
 				-moz-object-position: center;
 				-webkit-object-position: center;
 				-ms-object-position: center;
-				object-position: center;
+				object-position: top center;
 				display: block;
 				position: absolute;
 				top: 0;
@@ -4377,7 +4377,7 @@ input, select, textarea {
 		}
 
 	.banner .image {
-		background-color: rgba(0, 0, 0, 0.125);
+		background: transparent;
 	}
 
 	.banner.invert .image {
@@ -4891,13 +4891,14 @@ input, select, textarea {
 			width: 35%;
 			min-width: 25rem;
 			border-radius: 0;
+			background: transparent;
 		}
 
 			.spotlight.style1 .image img {
 				-moz-object-fit: cover;
 				-webkit-object-fit: cover;
 				-ms-object-fit: cover;
-				object-fit: cover;
+				object-fit: contain;
 				-moz-object-position: center;
 				-webkit-object-position: center;
 				-ms-object-position: center;
@@ -8601,3 +8602,21 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+/* === Botón OXISPORTS con degradado ========================== */
+.banner.style1 .actions .button{
+  /* Degradado celeste → azul */
+  background: linear-gradient(135deg, #5cc9ff 0%, #007bff 100%);
+  color: #ffffff;
+  border: none;
+  transition:
+    background 0.25s ease-in-out,
+    box-shadow 0.25s ease-in-out;
+}
+
+/* Efecto hover / focus: oscurece y realza */
+.banner.style1 .actions .button:hover,
+.banner.style1 .actions .button:focus{
+  background: linear-gradient(135deg, #28a0e6 0%, #0060d6 100%);
+  box-shadow: 0 0.25rem 0.75rem rgba(0,123,255,0.45);
+  color: #ffffff;
+}
